@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
             ),
-            isLoading ? SpinKitCubeGrid(size: 100.0, color: Colors.lightBlue) : Container() // show spinner if loading
+            isLoading ? SpinKitCubeGrid(size: 100.0, color: Colors.red) : Container() // show spinner if loading
           ],
         )),
       ),
