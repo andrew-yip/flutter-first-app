@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'screens/about_me.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,10 +10,9 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-
 class _MyAppState extends State<MyApp> {
   var isLoading = false;
-  var btnText = ['start button spinner', 'stop button spinner'];
+  var btnText = ['press to start spinning', 'press to stop spinning'];
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Center(child: Text('application [0]')),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.green,
         ),
         body: Scaffold(
             body: ListView(
@@ -31,45 +29,16 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  'andrew yip',
+                  'Andrew Yip\nsoftware engineer',
                   style: TextStyle(
                     color: Colors.blue,
-                    fontSize: 35,
+                    fontSize: 50.2,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Image(image: AssetImage('assets/images/me.png')),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Text(
-                      '- featured is my first project using flutter',
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton(
-                    child: Text('about me'), // ternary. if loading true text = [1] else [0]
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => AboutMe()));
-                    },
-                  ),
-                ),
-                Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 child: Text(isLoading ? btnText[1] : btnText[0]), // ternary. if loading true text = [1] else [0]
