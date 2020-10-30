@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:helloworldapp/screens/about_me.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,30 +13,50 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var isLoading = false;
-  var btnText = ['Press me to Load', 'Press me to stop Loading'];
+  var btnText = ['start spinning', 'stop spinning'];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('App 1')),
+          title: Center(child: Text('application [0]')),
           backgroundColor: Colors.green,
         ),
         body: Scaffold(
             body: ListView(
-          children: [
+              children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Andrew Yip',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 50.2,
-                  fontWeight: FontWeight.bold,
+              child: Center(
+                child: Text(
+                  'andrew yip',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Image(image: AssetImage('assets/images/me.png'))
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    child: Text('about me'), // ternary. if loading true text = [1] else [0]
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AboutMe()),
+                      );
+                    },
+                  ),
+                ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
