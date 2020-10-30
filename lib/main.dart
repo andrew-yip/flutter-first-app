@@ -12,27 +12,29 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var isLoading = false;
-  var btnText = ['Press me to Load', 'Press me to stop Loading'];
+  var btnText = ['press to start spinning', 'press to stop spinning'];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('App 1')),
+          title: Center(child: Text('application [0]')),
           backgroundColor: Colors.green,
         ),
         body: Scaffold(
             body: ListView(
-          children: [
+              children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Andrew Yip',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 50.2,
-                  fontWeight: FontWeight.bold,
+              child: Center(
+                child: Text(
+                  'Andrew Yip\nsoftware engineer',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 50.2,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
