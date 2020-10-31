@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('application [0]')),
+          title: Center(child: Text('andrew yip - application [0]')),
           backgroundColor: Colors.green,
         ),
         body: Scaffold(
@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  'andrew yip',
+                  'flutter app',
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 40,
