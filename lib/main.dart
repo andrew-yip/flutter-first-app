@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:helloworldapp/screens/about_me.dart';
+import 'package:flutter/src/widgets/navigator.dart';
 
 void main() {
   runApp(MyApp());
@@ -45,16 +47,14 @@ class _MyAppState extends State<MyApp> {
                     child: Image(image: AssetImage('assets/images/me.png'))
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton(
-                    child: Text('about me'), // ternary. if loading true text = [1] else [0]
+                Builder(
+                  builder: (context) => RaisedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => AboutMe()),
-                      );
+                      Navigator.push(context,
+                          MaterialPageRoute(
+                              builder: (context) => AboutMe()));
                     },
+                    child: Text('me'),
                   ),
                 ),
             Padding(
