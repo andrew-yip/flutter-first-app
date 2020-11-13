@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:helloworldapp/screens/about_me.dart';
 import 'package:flutter/src/widgets/navigator.dart';
+import 'package:helloworldapp/screens/about_me_fancy.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,7 +55,17 @@ class _MyAppState extends State<MyApp> {
                           MaterialPageRoute(
                               builder: (context) => AboutMe()));
                     },
-                    child: Text('me'),
+                    child: Text('dull me'),
+                  ),
+                ),
+                Builder(
+                  builder: (context) => RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(
+                              builder: (context) => AboutMeFancy()));
+                    },
+                    child: Text('fancy intro'),
                   ),
                 ),
             Padding(

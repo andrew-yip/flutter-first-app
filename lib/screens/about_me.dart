@@ -19,7 +19,7 @@ class AboutMe extends StatelessWidget {
                       child: Text('Go back!'),
                     ),
                   ),
-        Container (
+              Container (
           padding: const EdgeInsets.all(16.0),
           width: MediaQuery.of(context).size.width*0.8,
               child: new Column (
@@ -33,6 +33,17 @@ class AboutMe extends StatelessWidget {
                 ],
               ),
           ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'A little bit about me is that I am a junior studying Computer Science with minors in Physics and Mathematics. I enjoy programming and creating things to innovate technology. Ever since a young age, I have been in love with technology and becoming more knowledgable in things I love doing which is learning. \n\n In my free time, when I am not programming, I enjoy surfing and playing tennis. ',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                ),
               ],
           )
         ),
